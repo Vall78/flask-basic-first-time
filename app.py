@@ -13,8 +13,6 @@ from flask_ngrok import run_with_ngrok
 # =[Variabel Global]=============================
 app = Flask(__name__)
 
-run_with_ngrok(app)
-
 # =[Routing]=====================================
 @app.route("/")
 def beranda():
@@ -22,4 +20,5 @@ def beranda():
 
 # =[Main]========================================
 if __name__ == '__main__':
+    run_with_ngrok(app)
     app.run()
